@@ -4,11 +4,15 @@
 In this assignment, you will work alone or in pairs to create a React application which communicates with a Node.js server backend to present a minimally functional lost cat reporting application.
 
 ## Group Work
-For this assignment, you are allowed to work individually or in pairs.  If you choose to work in a group, you will be evaluated on your contribution to the group.
+For this assignment, you are allowed to work individually or in pairs.  If you choose to work in a group, you will be evaluated on your contribution to the group.  **You must choose a different partner than you had for Assignment 3**.
 
-Your instructor will examine git commit logs and other activity on GitHub to determine your level of involvement in the assignment.  There is an evaluation category where the instructor will deduct marks for students who are getting a "free ride". This deduction may be up to 100% of the value of the assignment.
+Your instructor will examine git commit logs and other activity on GitHub to determine your level of involvement in the assignment.  There is an evaluation category where the instructor will deduct marks for unequal participation. There will be deductions both for students who minimally participate, or get a "free ride" up to 100% of the grade for this assignment.
+
+If it is found that a student does all or nearly all of the project without planning for the inclusion of the other student, or "hogging all the work", there will be a suitable deduction for this type of behaviour as well. Somewhere you should document who had what responsibilities. The best way to do this is the built-in issue tracker, and by assigning people to issues.
 
 It is the general expectation that students will use the collaboration tools provided by GitHub in order to complete the assignment.  If it's not in the git log it didn't happen.
+
+Group work is an important skill.  In industry, nearly all work is group work. If you are having extraordinary trouble with this, please email your instructor.
 
 ## Artificial Intelligence Usage
 For this assignment, use of generative AI for content creation is strictly forbidden. You *may* use AI for bug analysis and error checking.  Use of AI for content generation on this assignment may result in a formal charge of academic integrity violation. Please see Mohawk College's academic integrity policy
@@ -73,9 +77,37 @@ A cat object has the following properties:
 - `owner_id` - The ID of the owner of the cat, cross referencing the Owner object list.
 - All other fields are the identifying attributes of the cat.
 
+#### The Owner Object
+An owner object has the following properties:
+- `owner_id` - A unique identifier for each cat. Note that an owner may own any number of cats.
+- `email` - Used as a pseudo-user name during the view cat sightings login procedure
+- `phone` - Used as a password during the view cat sightings login procedure.
+- All other fields are the identifying attributes of the person.
+
+#### The Sighting Object
+A Sighting object records the date, time and location that a missing cat was seen, and who it was seen by.
+- `cat_id` - The unique identifyer of the cat that was sighted.
+- `reported_by` - The name of the person who sighted the cat (distinct from owner names).
+- `datetime` - A timestamp string, the time at which the cat was spotted.
+- `location` - A string describing where and how the cat was spotted.
+
 ### The Node Server's API Specification
+The node server provided in this repository provides the following API.
+| Method | Endpoint | Description | Example |
+|--------|----------|-------------|---------|
+| GET    | /api/hello | Returns a Hello World string, for testing purpose only. |  |
+| POST | /api/reset | Restores data files to the the state stored in `data_backup` | |
+| GET | /api/cats | Returns a JSON containing the contents of `cats.json` | |
+| POST | /api/report/:id | Returns all sightings for cats owned by the specified owner (id). | /api/report/3 |
+| | | | |
+| | | | |
 
 ## Requirements
+
+### The Whole Thing Must Be React
+You are not permitted to add any HTML files to the project, or any HTML code which is not a React component. All JavaScript must be contained within your JSX files, and using traditional DOM manipulation is strictly forbidden.
+
+You are, however, permitted to use external CSS.
 
 ## Evaluation
 
