@@ -19,6 +19,8 @@ For this assignment, use of generative AI for content creation is strictly forbi
 
 The best way to demonstrate that this assignment is your own work is to commit and push your work frequently. If your entire solution is committed in one go, this will be taken as an indicator that an academic integrity violation may have occurred, and your work will be investigated for other signs of violation.
 
+Use of agentic AI to fabricate git logs is an even more serious violation of academic integrity. 
+
 ## Special Instructions
 As with all assignments in this class, your application is expected to compile and run without compiler errors, and that you have tested your application to ensure it meets the requirements.
 
