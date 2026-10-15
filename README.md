@@ -58,6 +58,7 @@ Our web application will have two main features.
     - Once the user has entered valid "login credentials", they will be given a read out of the sighting data for every cat they own in the database.
 
 The following features are obvious, but implementing them is *not a requirement*:
+
 3. The ability to add new owners to the database
 4. The ability to add missing cats to the database.
 
